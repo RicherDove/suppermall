@@ -1,28 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
+    <MainTabBar></MainTabBar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// 引用组件的时候要记得注册一下
+import MainTabBar from "./components/content/mainTabbar/MainTabbar";
 export default {
-  name: 'app',
+  name: "App",
   components: {
-    HelloWorld
+    MainTabBar
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* 在js中引用直接用import，但是在style中要用@来引用 */
+@import "./assets/css/base.css";
 </style>
